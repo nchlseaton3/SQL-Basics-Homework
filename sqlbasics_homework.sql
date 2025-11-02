@@ -16,3 +16,9 @@ FROM comments
 GROUP BY user_id
 ORDER BY comment_count DESC
 LIMIT 1;
+
+-- 4. How many users have usernames that end with 'er'? 2
+SELECT COUNT(*) AS usernames_end_with_er
+FROM users
+WHERE username LIKE '%er';
+
