@@ -9,3 +9,10 @@ WHERE bio LIKE '%travel%';
 SELECT COUNT(*) AS may_posts
 FROM posts
 WHERE created_at BETWEEN '2023-05-01' AND '2023-05-10';
+
+-- 3. What user has the most comments? user_id = 2, comment_count = 6
+SELECT user_id, COUNT(*) AS comment_count
+FROM comments
+GROUP BY user_id
+ORDER BY comment_count DESC
+LIMIT 1;
