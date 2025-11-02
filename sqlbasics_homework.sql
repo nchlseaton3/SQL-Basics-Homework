@@ -22,3 +22,9 @@ SELECT COUNT(*) AS usernames_end_with_er
 FROM users
 WHERE username LIKE '%er';
 
+-- 5. What post has the most comments? post_id = 1, comment_count = 5
+SELECT post_id, COUNT(*) AS comment_count
+FROM comments
+GROUP BY post_id
+ORDER BY comment_count DESC
+LIMIT 1;
