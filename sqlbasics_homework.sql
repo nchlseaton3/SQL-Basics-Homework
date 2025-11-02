@@ -28,3 +28,7 @@ FROM comments
 GROUP BY post_id
 ORDER BY comment_count DESC
 LIMIT 1;
+
+-- 6. How many different user IDs have posted content? 50
+SELECT COUNT(user_id) AS users_with_posts
+FROM posts;
