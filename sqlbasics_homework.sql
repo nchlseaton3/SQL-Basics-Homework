@@ -45,3 +45,9 @@ SELECT COUNT(*) AS feb_johns
 FROM users
 WHERE created_at BETWEEN '2023-02-01' AND '2023-02-28'
   AND username LIKE '%john%';
+
+  -- 9. From users who joined in March 2023, how many have usernames containing 'mar'? 0
+SELECT COUNT(*) AS march_mars
+FROM users
+WHERE created_at BETWEEN '2023-03-01' AND '2023-03-31'
+  AND username LIKE '%mar%';
