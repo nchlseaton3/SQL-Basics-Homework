@@ -51,3 +51,10 @@ SELECT COUNT(*) AS march_mars
 FROM users
 WHERE created_at BETWEEN '2023-03-01' AND '2023-03-31'
   AND username LIKE '%mar%';
+
+-- 10. What post has the most reactions? post_id = 1, reaction_count = 5
+SELECT post_id, COUNT(*) AS reaction_count
+FROM reactions
+GROUP BY post_id
+ORDER BY reaction_count DESC
+LIMIT 1;  
