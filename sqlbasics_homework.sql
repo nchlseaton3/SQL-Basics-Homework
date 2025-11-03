@@ -39,3 +39,9 @@ FROM following
 GROUP BY followed_id
 ORDER BY followers_count DESC
 LIMIT 1;
+
+-- 8. From users who joined in February 2023, how many have usernames containing 'john'? 0
+SELECT COUNT(*) AS feb_johns
+FROM users
+WHERE created_at BETWEEN '2023-02-01' AND '2023-02-28'
+  AND username LIKE '%john%';
