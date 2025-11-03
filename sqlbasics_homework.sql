@@ -32,3 +32,10 @@ LIMIT 1;
 -- 6. How many different user IDs have posted content? 50
 SELECT COUNT(user_id) AS users_with_posts
 FROM posts;
+
+-- 7. What user has the most people following them? user_id = 1, followers_count = 7
+SELECT followed_id AS user_id, COUNT(*) AS followers_count
+FROM following
+GROUP BY followed_id
+ORDER BY followers_count DESC
+LIMIT 1;
